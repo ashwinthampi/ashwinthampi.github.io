@@ -1,0 +1,71 @@
+/* Basic styling for the website */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #ffffff;
+    color: rgb(8, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+section {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li h3 {
+    margin: 0;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+nav {
+    background-color: #ffffff;
+    color: rgb(8, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex; /* Use Flexbox to create a horizontal layout */
+    justify-content: space-between; /* Spread items evenly along the horizontal axis */
+    padding: 5px;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px; /* Add padding between menu items if desired */
+}
+
+/* Customize the styling as needed */
