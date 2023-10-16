@@ -4,7 +4,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         // Add the "show" class to the element's class list when it becomes visible.
         entry.target.classList.add('show');
-    });
+    });  
 });
 // Select all elements with the "hidden" class.
 const hiddenElement = document.querySelectorAll('.hidden');
