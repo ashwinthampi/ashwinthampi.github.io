@@ -1,6 +1,7 @@
 /* Basic styling for the website */
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rock Salt', Rock Salt, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -60,6 +61,8 @@ nav ul {
     justify-content: space-between;
     padding: 5px;
     list-style-type: none;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 li {
@@ -87,4 +90,6 @@ nav a {
     filter: blur(0);
     transform: translateX(0);
 }
+
+
 /* Customize the styling as needed */
