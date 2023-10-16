@@ -4,9 +4,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-} 
+}
 
 header {
+    
     background-color: #ffffff;
     color: rgb(8, 0, 0);
     text-align: center;
@@ -18,14 +19,15 @@ h1 {
 }
 
 header p {
+
     margin: 5px 0;
 }
 
 section {
-    background-color: #fff;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 25vh;
 }
 
 ul {
@@ -52,13 +54,15 @@ nav {
 }
 
 nav ul {
-    display: flex; /* Use Flexbox to create a horizontal layout */
-    justify-content: space-between; /* Spread items evenly along the horizontal axis */
+    display: flex;
+    place-items: center;
+    align-content: center;
+    justify-content: space-between;
     padding: 5px;
     list-style-type: none;
 }
 
-nav li {
+li {
     margin: 0;
 }
 
@@ -68,4 +72,17 @@ nav a {
     padding: 10px; /* Add padding between menu items if desired */
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateX(100%);
+    transition: all 1s;
+
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
 /* Customize the styling as needed */
