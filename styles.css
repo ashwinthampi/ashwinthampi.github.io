@@ -6,7 +6,7 @@ body {
     padding: 0;
     background-color: #FCF6F5;
 }
-
+/*Header area*/
 header {
     
     background-color: #FCF6F5;
@@ -15,38 +15,74 @@ header {
     padding: 20px;
 }
 
-h1 {
-    margin: 0;
-}
-
 header p {
 
     margin: 5px 0;
 }
 
+/*h area*/
+li h3 {
+    margin: 0;
+    font-weight: bold;
+    margin-top: 10px;
+}
+h1 {
+    margin: 0;
+}
+
+/*a area*/
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px; /* Add padding between menu items if desired */
+}
+/*Section area*/
 section {
     display: grid;
     place-items: center;
     align-content: center;
     min-height: 25vh;
 }
-
+/* Apply the animation to anchor tags within the section */
+section a {
+    text-decoration: none; /* Remove the default underline */
+    position: relative;
+    transition: text-decoration 1s;
+}
+  
+/* Create the underline animation */
+section a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px; 
+    background-color: #000000; 
+    transform: scaleX(0); 
+    transform-origin: bottom;
+    transition: transform 1s;
+}
+  
+section a:hover::before {
+    transform: scaleX(1); 
+}
+  
 ul {
     list-style-type: none;
     padding: 0;
 }
-
-li h3 {
+/*li area*/
+li {
     margin: 0;
-    font-weight: bold;
-    margin-top: 10px;
 }
 
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
+/*nav area*/
 nav {
     background-color: #FCF6F5;
     color: rgb(8, 0, 0);
@@ -65,16 +101,8 @@ nav ul {
     margin-right: 50px;
 }
 
-li {
-    margin: 0;
-}
 
-nav a {
-    text-decoration: none;
-    color: #000000;
-    padding: 10px; /* Add padding between menu items if desired */
-}
-
+/*JavaScript area*/
 .hidden {
     opacity: 0;
     filter: blur(6px);
@@ -91,5 +119,5 @@ nav a {
     transform: translateX(0);
 }
 
-
+  
 /* Customize the styling as needed */
