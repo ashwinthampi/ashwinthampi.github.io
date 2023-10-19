@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+body {
+    font-family: 'Rock Salt', Rock Salt, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FCF6F5;
+    min-height: 100vh; /* Center content within the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+
+}
+nav a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px; /* Add padding between menu items if desired */
+}
+
+nav ul {
+    display: flex;
+    place-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 5px;
+    list-style-type: none;
+    margin-left: 50px;
+    margin-right: 50px;
+}
