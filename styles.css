@@ -13,6 +13,8 @@ header {
     color: rgb(8, 0, 0);
     text-align: center;
     padding: 20px;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
 }
 
 header p {
@@ -119,5 +121,14 @@ nav ul {
     transform: translateX(0);
 }
 
+/*CSS Animation Area*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Initial opacity */
+    }
+    100% {
+        opacity: 1; /* Final opacity (fully visible) */
+    }
+}
   
 /* Customize the styling as needed */
