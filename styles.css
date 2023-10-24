@@ -15,6 +15,7 @@ header {
     padding: 20px;
     opacity: 0;
     animation: fadeIn 3s ease forwards;
+
 }
 
 header p {
@@ -101,6 +102,8 @@ nav ul {
     list-style-type: none;
     margin-left: 50px;
     margin-right: 50px;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
 }
 
 
