@@ -42,7 +42,7 @@ a {
 nav a {
     text-decoration: none;
     color: #000000;
-    padding: 10px; /* Add padding between menu items if desired */
+    padding: 10px; 
 }
 /*Section area*/
 section {
@@ -53,7 +53,7 @@ section {
 }
 /* Apply the animation to anchor tags within the section */
 section a {
-    text-decoration: none; /* Remove the default underline */
+    text-decoration: none;
     position: relative;
     transition: text-decoration 1s;
 }
