@@ -21,6 +21,11 @@ header {
 
 }
 
+hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+  }
+
 header p {
 
     margin: 5px 0;
