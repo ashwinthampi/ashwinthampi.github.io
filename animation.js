@@ -11,3 +11,8 @@ const hiddenElement = document.querySelectorAll('.hidden');
 // Iterate through each element with the "hidden" class.
 // Instruct the observer to watch (observe) each element.
 hiddenElement.forEach((el) => observer.observe(el)); 
+
+document.addEventListener('visibilitychange', () => {
+    document.hidden ? document.body.style.animationPlayState = 'paused' 
+                   : document.body.style.animationPlayState = 'running';
+  });

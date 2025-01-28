@@ -12,7 +12,7 @@ body {
 /*Header area*/
 header {
     
-    background-color: #FCF6F5;
+    background-color: transparent;
     color: rgb(8, 0, 0);
     text-align: center;
     padding: 20px;
@@ -142,4 +142,14 @@ nav ul {
     }
 }
   
+/* Add to bottom of styles.css */
+/* Replace previous #gameOfLife CSS with this */
+#gameOfLife {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Changed from -1 */
+    opacity: 0.1;
+    pointer-events: none;
+  }
 /* Customize the styling as needed */
