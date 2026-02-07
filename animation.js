@@ -35,7 +35,7 @@ document.addEventListener('visibilitychange', () => {
 
         // Adaptive speed: longer text types faster, capped between 5-25ms per character
         const textLen = html.replace(/<[^>]*>/g, '').length;
-        const speed = Math.max(5, Math.min(25, Math.floor(1500 / (textLen || 1))));
+        const speed = Math.max(8, Math.min(30, Math.floor(2000 / (textLen || 1))));
         let i = 0;
         let output = '';
         el.classList.add('typing');
