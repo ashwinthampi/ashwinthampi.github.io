@@ -111,6 +111,7 @@ section {
     place-items: center;
     align-content: center;
     min-height: 25vh;
+    padding-bottom: 100px;
 }
 /* Apply the animation to anchor tags within the section */
 section a {
@@ -198,6 +199,17 @@ nav ul {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+/* Typing animation cursor */
+.typing::after {
+    content: '\u258C';
+    animation: blink-cursor 0.7s step-end infinite;
+    margin-left: 1px;
+}
+
+@keyframes blink-cursor {
+    50% { opacity: 0; }
 }
 
 /*CSS Animation Area*/
