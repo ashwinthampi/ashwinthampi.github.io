@@ -1,9 +1,25 @@
+/* ===== THEME VARIABLES ===== */
+:root {
+    --bg-color: #FCF6F5;
+    --text-color: #000000;
+    --accent-color: #0e0000;
+    --link-color: #000000;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --accent-color: #c0c0c0;
+    --link-color: #e0e0e0;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
 body {
     font-family: 'Rock Salt', Rock Salt, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FCF6F5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -14,7 +30,7 @@ body {
 }
 nav a {
     text-decoration: none;
-    color: #000000;
+    color: var(--link-color);
     padding: 10px;
     position: relative;
 }
@@ -26,7 +42,7 @@ nav a::before {
     left: 0;
     right: 0;
     height: 3px;
-    background-color: #000000;
+    background-color: var(--accent-color);
     transform: scaleX(0);
     transform-origin: bottom;
     transition: transform 1s;

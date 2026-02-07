@@ -1,18 +1,28 @@
-const COLORS = ['#FCF6F5', '#0e0000'];
 const CELL_SIZE = 15;
 const SPEED = 6;
+
+function getThemeColors() {
+    const style = getComputedStyle(document.documentElement);
+    return [
+        style.getPropertyValue('--bg-color').trim() || '#FCF6F5',
+        style.getPropertyValue('--accent-color').trim() || '#0e0000'
+    ];
+}
 
 class GameOfLife {
   constructor() {
     this.canvas = document.createElement('canvas');
     this.canvas.id = 'gameOfLife';
     document.body.prepend(this.canvas);
-    // Add padding to body to prevent content overlap
     document.body.style.paddingTop = '20px';
     this.ctx = this.canvas.getContext('2d');
+    this.colors = getThemeColors();
     this.resize();
     this.initGrid();
     window.addEventListener('resize', () => this.resize());
+    window.addEventListener('themechange', () => {
+        this.colors = getThemeColors();
+    });
     this.animate();
   }
 
@@ -26,7 +36,7 @@ class GameOfLife {
   }
 
   initGrid() {
-    this.grid = Array(this.cols).fill().map(() => 
+    this.grid = Array(this.cols).fill().map(() =>
       Array(this.rows).fill().map(() => Math.floor(Math.random() > 0.8))
     );
   }
@@ -63,7 +73,7 @@ class GameOfLife {
     for (let i = 0; i < this.cols; i++) {
       for (let j = 0; j < this.rows; j++) {
         if (this.grid[i][j]) {
-          this.ctx.fillStyle = COLORS[Math.floor(Math.random() * COLORS.length)];
+          this.ctx.fillStyle = this.colors[Math.floor(Math.random() * this.colors.length)];
           this.ctx.fillRect(i * CELL_SIZE, j * CELL_SIZE, CELL_SIZE-1, CELL_SIZE-1);
         }
       }
@@ -72,12 +82,12 @@ class GameOfLife {
 
   animate() {
     this.frameCounter = (this.frameCounter || 0) + 1;
-    
+
     if(this.frameCounter % SPEED === 0) {
       this.draw();
       this.update();
     }
-    
+
     requestAnimationFrame(() => this.animate());
   }
 }

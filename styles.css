@@ -1,3 +1,18 @@
+/* ===== THEME VARIABLES ===== */
+:root {
+    --bg-color: #FCF6F5;
+    --text-color: #000000;
+    --accent-color: #0e0000;
+    --link-color: #000000;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --accent-color: #c0c0c0;
+    --link-color: #e0e0e0;
+}
+
 /* Basic styling for the website */
 @font-face {
     font-family: 'Leap';
@@ -7,13 +22,14 @@ body {
     font-family: 'Leap', 'Courier New', Courier, monospace, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FCF6F5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 /*Header area*/
 header {
 
     background-color: transparent;
-    color: rgb(8, 0, 0);
+    color: var(--text-color);
     text-align: center;
     padding: 20px;
     opacity: 0;
@@ -22,7 +38,7 @@ header {
 }
 
 hr.rounded {
-    border-top: 2px solid #0e0000;
+    border-top: 2px solid var(--accent-color);
     border-radius: 2px;
   }
 
@@ -36,7 +52,7 @@ hr.rounded {
 
 .contact-links a {
     text-decoration: none;
-    color: #000000;
+    color: var(--link-color);
 }
 
 /*h area*/
@@ -52,12 +68,12 @@ h1 {
 /*a area*/
 a {
     text-decoration: none;
-    color: #000000;
+    color: var(--link-color);
 }
 
 nav a {
     text-decoration: none;
-    color: #000000;
+    color: var(--link-color);
     padding: 10px;
     position: relative;
 }
@@ -69,7 +85,7 @@ nav a::before {
     left: 0;
     right: 0;
     height: 3px;
-    background-color: #000000;
+    background-color: var(--accent-color);
     transform: scaleX(0);
     transform-origin: bottom;
     transition: transform 1s;
@@ -81,7 +97,7 @@ nav a:hover::before {
 
 nav a.active {
     font-weight: bold;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid var(--accent-color);
     padding-bottom: 4px;
 }
 
@@ -111,7 +127,7 @@ section a::before {
     left: 0;
     right: 0;
     height: 3px;
-    background-color: #000000;
+    background-color: var(--accent-color);
     transform: scaleX(0);
     transform-origin: bottom;
     transition: transform 1s;
@@ -132,8 +148,8 @@ li {
 
 /*nav area*/
 nav {
-    background-color: #FCF6F5;
-    color: rgb(8, 0, 0);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     text-align: center;
     padding: 20px;
 }
@@ -187,10 +203,10 @@ nav ul {
 /*CSS Animation Area*/
 @keyframes fadeIn {
     0% {
-        opacity: 0; /* Initial opacity */
+        opacity: 0;
     }
     100% {
-        opacity: 1; /* Final opacity (fully visible) */
+        opacity: 1;
     }
 }
 
