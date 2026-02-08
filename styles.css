@@ -13,6 +13,23 @@
     --link-color: #e0e0e0;
 }
 
+/* Skip navigation link */
+.skip-nav {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 999;
+    padding: 8px 16px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
+}
+
+.skip-nav:focus {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /* Basic styling for the website */
 @font-face {
     font-family: 'Leap';
@@ -37,10 +54,12 @@ header {
 
 }
 
-hr.rounded {
+section ul > li + li {
     border-top: 2px solid var(--accent-color);
     border-radius: 2px;
-  }
+    padding-top: 10px;
+    margin-top: 10px;
+}
 
 .contact-links {
     display: flex;
