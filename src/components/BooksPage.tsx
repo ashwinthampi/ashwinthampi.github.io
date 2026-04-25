@@ -34,7 +34,6 @@ const sections: { title: string; items: string[] }[] = [
       'The Myth of Sisyphus — Albert Camus',
       'Dune — Frank Herbert',
       'The Creative Act: A Way of Being — Rick Rubin',
-      'Retire Before Mom and Dad — Rob Berger',
     ],
   },
 ]
