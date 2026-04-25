@@ -5,9 +5,8 @@ export default function About() {
         about
       </h2>
       <p className="text-sm leading-relaxed text-[#111]">
-        Currently building AI agents and automation tools at{' '}
-        <span className="font-semibold">ERP Suites</span>. Purdue
-        computer engineering grad.
+        Currently building AI agents and automation tools at ERP Suites.
+        Purdue computer engineering grad.
       </p>
     </section>
   )
