@@ -16,7 +16,7 @@ export default function Contact() {
         </li>
         <li className="text-sm flex flex-wrap items-center gap-x-2 group">
           <a
-            href="https://linkedin.com/in/ashwinthampi"
+            href="https://linkedin.com/in/ashwin-thampi"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#111] underline underline-offset-2 decoration-[#555]/30 hover:decoration-[#111] transition-colors"
