@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+  --color-bg: #f5f0eb;
+  --color-text: #111111;
+  --color-muted: #555555;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: #111111;
+  color: #f5f0eb;
+}
+
+/* LinkedIn hint: visible by default on touch devices, hover-triggered on desktop */
+@media (hover: hover) {
+  .linkedin-hint {
+    opacity: 0;
+  }
+  .group:hover .linkedin-hint {
+    opacity: 1;
+  }
+}
