@@ -8,6 +8,22 @@ type Item = string | { title: string; href: string }
 
 const sections: { title: string; items: Item[] }[] = [
   {
+    title: 'currently rotating',
+    items: [
+      {
+        title: 'KETTAMA @ Coachella 2026 — Yuma Stage',
+        href: 'https://www.youtube.com/watch?v=t0TZhkzDMAI',
+      },
+      {
+        title: 'Krystian Zimerman — Chopin & Schubert',
+        href: 'https://www.youtube.com/watch?v=MgmHetWIfPc',
+      },
+      'snafu — :)',
+      'Boards of Canada — Inferno',
+      'siraph — 想像の雨',
+    ],
+  },
+  {
     title: 'favorite albums',
     items: [
       'Boards of Canada — Music Has The Right To Children',
@@ -54,22 +70,10 @@ const sections: { title: string; items: Item[] }[] = [
         title: '100 gecs — Boiler Room: Los Angeles',
         href: 'https://soundcloud.com/platform/100-gecs-los-angeles',
       },
-    ],
-  },
-  {
-    title: 'currently rotating',
-    items: [
       {
-        title: 'KETTAMA @ Coachella 2026 — Yuma Stage',
-        href: 'https://www.youtube.com/watch?v=t0TZhkzDMAI',
+        title: 'Fantasm @ Verknipt ArenA, Amsterdam',
+        href: 'https://soundcloud.com/verknipt-events/fantasm-verknipt-arena',
       },
-      {
-        title: 'Krystian Zimerman — Chopin & Schubert',
-        href: 'https://www.youtube.com/watch?v=MgmHetWIfPc',
-      },
-      'snafu — :)',
-      'Boards of Canada — Inferno',
-      'siraph — 想像の雨',
     ],
   },
 ]
