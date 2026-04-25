@@ -3,19 +3,25 @@ import { useRef, useEffect, useCallback } from 'react'
 const ASCII_CHARS = ' .:-=+*#%@'
 const FONT_SIZE = 14
 const LINE_HEIGHT = FONT_SIZE
+const MAX_DIST = 250
+const MAX_DIST_SQ = MAX_DIST * MAX_DIST
 
 export default function AsciiBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const mouseRef = useRef({ x: -1000, y: -1000 })
   const pinballRef = useRef<{ vx: number; vy: number } | null>(null)
   const animFrameRef = useRef<number>(0)
+  const wasEmptyRef = useRef(true)
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current
     if (!canvas) return
 
     const ctx = canvas.getContext('2d')
-    if (!ctx) return
+    if (!ctx) {
+      animFrameRef.current = requestAnimationFrame(draw)
+      return
+    }
 
     const { width, height } = canvas
 
@@ -41,11 +47,26 @@ export default function AsciiBackground() {
       mouseRef.current = { x, y }
     }
 
-    const cols = Math.floor(width / (FONT_SIZE * 0.6))
-    const rows = Math.floor(height / LINE_HEIGHT)
     const mx = mouseRef.current.x
     const my = mouseRef.current.y
-    const maxDist = 250
+
+    // Early exit: mouse is too far off-screen for any cell to be lit
+    if (
+      mx < -MAX_DIST ||
+      mx > width + MAX_DIST ||
+      my < -MAX_DIST ||
+      my > height + MAX_DIST
+    ) {
+      if (!wasEmptyRef.current) {
+        ctx.clearRect(0, 0, width, height)
+        wasEmptyRef.current = true
+      }
+      animFrameRef.current = requestAnimationFrame(draw)
+      return
+    }
+
+    const cols = Math.floor(width / (FONT_SIZE * 0.6))
+    const rows = Math.floor(height / LINE_HEIGHT)
 
     ctx.clearRect(0, 0, width, height)
     ctx.font = `${FONT_SIZE}px monospace`
@@ -58,20 +79,22 @@ export default function AsciiBackground() {
 
         const dx = x - mx
         const dy = y - my
-        const dist = Math.sqrt(dx * dx + dy * dy)
+        const distSq = dx * dx + dy * dy
 
-        const intensity = Math.max(0, 1 - dist / maxDist)
+        if (distSq >= MAX_DIST_SQ) continue
+
+        const intensity = 1 - Math.sqrt(distSq) / MAX_DIST
         const charIndex = Math.floor(intensity * (ASCII_CHARS.length - 1))
-        const char = ASCII_CHARS[charIndex]
 
         if (charIndex === 0) continue
 
         const alpha = intensity * 0.12
         ctx.fillStyle = `rgba(17, 17, 17, ${alpha})`
-        ctx.fillText(char, x, y)
+        ctx.fillText(ASCII_CHARS[charIndex], x, y)
       }
     }
 
+    wasEmptyRef.current = false
     animFrameRef.current = requestAnimationFrame(draw)
   }, [])
 
@@ -98,6 +121,13 @@ export default function AsciiBackground() {
       mouseRef.current = { x: -1000, y: -1000 }
     }
 
+    const handleVisibility = () => {
+      cancelAnimationFrame(animFrameRef.current)
+      if (!document.hidden) {
+        animFrameRef.current = requestAnimationFrame(draw)
+      }
+    }
+
     resize()
 
     if (isHoverDevice) {
@@ -112,6 +142,7 @@ export default function AsciiBackground() {
     }
 
     window.addEventListener('resize', resize)
+    document.addEventListener('visibilitychange', handleVisibility)
 
     animFrameRef.current = requestAnimationFrame(draw)
 
@@ -119,6 +150,7 @@ export default function AsciiBackground() {
       window.removeEventListener('resize', resize)
       window.removeEventListener('mousemove', handleMouse)
       window.removeEventListener('mouseout', handleLeave)
+      document.removeEventListener('visibilitychange', handleVisibility)
       cancelAnimationFrame(animFrameRef.current)
     }
   }, [draw])
