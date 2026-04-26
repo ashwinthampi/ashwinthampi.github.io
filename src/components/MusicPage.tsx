@@ -106,8 +106,8 @@ export default function MusicPage({ onBack }: Props) {
         favorite music
       </h1>
       <p className="text-xs text-[#555] mb-12">
-        "Art is how we decorate space, music is how we decorate time."{' '}
-        <span className="whitespace-nowrap">Jean-Michel Basquiat</span>
+        "Art is how we decorate space, music is how we decorate time."
+        <span className="block">Jean-Michel Basquiat</span>
       </p>
       {sections.map((section) => (
         <section key={section.title} className="mb-12">
