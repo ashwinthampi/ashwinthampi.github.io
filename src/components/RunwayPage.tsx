@@ -65,9 +65,13 @@ export default function RunwayPage({ onBack }: Props) {
   return (
     <>
       <BackButton onBack={onBack} />
-      <h1 className="text-2xl sm:text-3xl font-bold text-[#111] mb-12">
+      <h1 className="text-2xl sm:text-3xl font-bold text-[#111] mb-3">
         favorite runway shows
       </h1>
+      <p className="text-xs text-[#555] mb-12">
+        "I think perfection is ugly. Somewhere in the things humans make, I want to see scars, failure, disorder, distortion."
+        <span className="block">Yohji Yamamoto</span>
+      </p>
       {shows.length === 0 ? (
         <p className="text-sm italic text-[#999]">coming soon</p>
       ) : (
