@@ -24,27 +24,42 @@ const sections: { title: string; items: Item[] }[] = [
     ],
   },
   {
-    title: 'favorite albums',
+    title: 'imprint',
     items: [
       'Boards of Canada — Music Has The Right To Children',
-      'KIDS SEE GHOSTS — KIDS SEE GHOSTS',
       'Skrillex — Scary Monsters and Nice Sprites',
-      'Playboi Carti — Whole Lotta Red',
-      'Kanye West — Yeezus',
-      'Burial — Untrue',
       'Bill Evans — Portrait in Jazz',
       'Chet Baker — Chet',
-      'Ling Tosite Sigure — Inspiration is DEAD',
+    ],
+  },
+  {
+    title: 'drift',
+    items: [
+      'Burial — Untrue',
+      'Slowdive — Just for a Day',
+      'Nujabes — Modal Soul',
+    ],
+  },
+  {
+    title: 'introspective',
+    items: [
+      'KIDS SEE GHOSTS — KIDS SEE GHOSTS',
       'Drake — Nothing Was The Same',
       'Kendrick Lamar — Good Kid, M.A.A.D City',
-      'Nujabes — Modal Soul',
-      'Slowdive — Just for a Day',
+    ],
+  },
+  {
+    title: 'kinetic',
+    items: [
+      'Playboi Carti — Whole Lotta Red',
+      'Kanye West — Yeezus',
       'Jack Ü — Jack Ü',
+      'Ling Tosite Sigure — Inspiration is DEAD',
       "YOU LOVE HER COZ SHE'S DEAD — YOU LOVE HER COZ SHE'S DEAD",
     ],
   },
   {
-    title: 'favorite dj sets',
+    title: 'dj sets',
     items: [
       {
         title: 'Skrillex — Live @ Ultra Music Festival 2015',
