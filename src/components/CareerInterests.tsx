@@ -1,7 +1,7 @@
 const interests = [
-  'AI and agent research & development',
+  'the frontier of AI agents and intelligence research',
   'software at the seams of creative work and technical systems',
-  'hardware engineering',
+  'embedded software and digital hardware',
 ]
 
 export default function CareerInterests() {
