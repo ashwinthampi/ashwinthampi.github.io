@@ -16,9 +16,10 @@ export default function PersonalInterests({ onNavigate }: Props) {
       <h2 className="text-xs tracking-widest text-[#555] mb-3">
         beyond my work
       </h2>
-      <ul className="list-disc pl-5 space-y-1">
+      <ul className="space-y-1">
         {items.map((item) => (
           <li key={item.page} className="text-sm text-[#111]">
+            <span className="text-[#555] mr-2">-&gt;</span>
             <button
               onClick={() => onNavigate(item.page)}
               className="text-left underline underline-offset-2 decoration-[#555]/30 hover:decoration-[#111] transition-colors cursor-pointer"

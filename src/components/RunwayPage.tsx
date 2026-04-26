@@ -32,6 +32,10 @@ const shows: Show[] = [
     href: 'https://www.youtube.com/watch?v=SG6jjAUCzMk&t=845s',
   },
   {
+    title: 'A-COLD-WALL* — Spring/Summer 2022',
+    href: 'https://www.youtube.com/watch?v=le59feUbS0k',
+  },
+  {
     title: 'KidSuper — Superby\'s Auction Fashion Show',
     href: 'https://www.youtube.com/watch?v=IRckHSuIJlk',
   },

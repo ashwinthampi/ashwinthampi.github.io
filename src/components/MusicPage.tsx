@@ -102,9 +102,13 @@ export default function MusicPage({ onBack }: Props) {
   return (
     <>
       <BackButton onBack={onBack} />
-      <h1 className="text-2xl sm:text-3xl font-bold text-[#111] mb-12">
+      <h1 className="text-2xl sm:text-3xl font-bold text-[#111] mb-3">
         favorite music
       </h1>
+      <p className="text-xs text-[#555] mb-12">
+        "Art is how we decorate space, music is how we decorate time."{' '}
+        <span className="whitespace-nowrap">Jean-Michel Basquiat</span>
+      </p>
       {sections.map((section) => (
         <section key={section.title} className="mb-12">
           <h2 className="text-xs tracking-widest text-[#555] mb-3">
