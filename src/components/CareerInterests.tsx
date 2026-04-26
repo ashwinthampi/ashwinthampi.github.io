@@ -1,6 +1,6 @@
 const interests = [
   'AI and agent research & development',
-  'application and tools development',
+  'software at the seams of creative work and technical systems',
   'hardware engineering',
 ]
 

@@ -42,9 +42,13 @@ export default function BooksPage({ onBack }: Props) {
   return (
     <>
       <BackButton onBack={onBack} />
-      <h1 className="text-2xl sm:text-3xl font-bold text-[#111] mb-12">
+      <h1 className="text-2xl sm:text-3xl font-bold text-[#111] mb-3">
         books
       </h1>
+      <p className="text-xs text-[#555] mb-12">
+        "With freedom, flowers, books, and the moon, who could not be perfectly happy?"
+        <span className="block">Oscar Wilde</span>
+      </p>
       {sections.map((section) => (
         <section key={section.title} className="mb-12">
           <h2 className="text-xs tracking-widest text-[#555] mb-3">
