@@ -26,6 +26,9 @@ export default function App() {
         {page === 'home' && (
           <>
             <Hero />
+            <p className="text-xs text-[#555] mb-12">
+              the things we build are reflections of how we think, and that the work of engineering is, at its best, closer to writing than to manufacturing.
+            </p>
             <About />
             <CareerInterests />
             <PersonalInterests onNavigate={setPage} />
