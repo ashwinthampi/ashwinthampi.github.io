@@ -11,70 +11,70 @@ const sections: { title: string; items: Item[] }[] = [
     title: 'currently rotating',
     items: [
       {
-        title: 'KETTAMA @ Coachella 2026 — Yuma Stage',
+        title: 'KETTAMA @ Coachella 2026 - Yuma Stage',
         href: 'https://www.youtube.com/watch?v=t0TZhkzDMAI',
       },
       {
-        title: 'Krystian Zimerman — Chopin & Schubert',
+        title: 'Krystian Zimerman - Chopin & Schubert',
         href: 'https://www.youtube.com/watch?v=MgmHetWIfPc',
       },
-      'snafu — :)',
-      'Boards of Canada — Inferno',
-      'siraph — 想像の雨',
+      'snafu - :)',
+      'Boards of Canada - Inferno',
+      'siraph - 想像の雨',
     ],
   },
   {
     title: 'imprint',
     items: [
-      'Boards of Canada — Music Has The Right To Children',
-      'Skrillex — Scary Monsters and Nice Sprites',
-      'Bill Evans — Portrait in Jazz',
-      'Chet Baker — Chet',
+      'Boards of Canada - Music Has The Right To Children',
+      'Skrillex - Scary Monsters and Nice Sprites',
+      'Bill Evans - Portrait in Jazz',
+      'Chet Baker - Chet',
     ],
   },
   {
     title: 'drift',
     items: [
-      'Burial — Untrue',
-      'Slowdive — Just for a Day',
-      'Nujabes — Modal Soul',
+      'Burial - Untrue',
+      'Slowdive - Just for a Day',
+      'Nujabes - Modal Soul',
     ],
   },
   {
     title: 'introspective',
     items: [
-      'KIDS SEE GHOSTS — KIDS SEE GHOSTS',
-      'Drake — Nothing Was The Same',
-      'Kendrick Lamar — Good Kid, M.A.A.D City',
+      'KIDS SEE GHOSTS - KIDS SEE GHOSTS',
+      'Drake - Nothing Was The Same',
+      'Kendrick Lamar - Good Kid, M.A.A.D City',
     ],
   },
   {
     title: 'kinetic',
     items: [
-      'Playboi Carti — Whole Lotta Red',
-      'Kanye West — Yeezus',
-      'Jack Ü — Jack Ü',
-      'Ling Tosite Sigure — Inspiration is DEAD',
-      "YOU LOVE HER COZ SHE'S DEAD — YOU LOVE HER COZ SHE'S DEAD",
+      'Playboi Carti - Whole Lotta Red',
+      'Kanye West - Yeezus',
+      'Jack Ü - Jack Ü',
+      'Ling Tosite Sigure - Inspiration is DEAD',
+      "YOU LOVE HER COZ SHE'S DEAD - YOU LOVE HER COZ SHE'S DEAD",
     ],
   },
   {
     title: 'dj sets',
     items: [
       {
-        title: 'Skrillex — Live @ Ultra Music Festival 2015',
+        title: 'Skrillex - Live @ Ultra Music Festival 2015',
         href: 'https://www.youtube.com/watch?v=V2VmcuOEqEg&t=3525s',
       },
       {
-        title: 'DJ Heartstring — Boiler Room: Melbourne',
+        title: 'DJ Heartstring - Boiler Room: Melbourne',
         href: 'https://soundcloud.com/platform/dj-heartstring-melbourne',
       },
       {
-        title: 'Skrillex — Live @ Red Rocks Amphitheatre 2014',
+        title: 'Skrillex - Live @ Red Rocks Amphitheatre 2014',
         href: 'https://www.youtube.com/watch?v=mMvq44Bvr-w&t=3720s',
       },
       {
-        title: 'Soul Mass Transit System — Boiler Room: Leeds',
+        title: 'Soul Mass Transit System - Boiler Room: Leeds',
         href: 'https://soundcloud.com/platform/soul-mass-transit-system-leeds',
       },
       {
@@ -82,7 +82,7 @@ const sections: { title: string; items: Item[] }[] = [
         href: 'https://soundcloud.com/klangkuenstler/klangkuenstler-outworld-secret-rave-berlin-full-set',
       },
       {
-        title: '100 gecs — Boiler Room: Los Angeles',
+        title: '100 gecs - Boiler Room: Los Angeles',
         href: 'https://soundcloud.com/platform/100-gecs-los-angeles',
       },
       {
