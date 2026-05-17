@@ -8,35 +8,35 @@ type Show = string | { title: string; href: string }
 
 const shows: Show[] = [
   {
-    title: 'Number (N)ine — A/W 2000 "Redisun"',
+    title: 'Number (N)ine - A/W 2000 "Redisun"',
     href: 'https://www.youtube.com/watch?v=a7ZKbz0ioqU&t=412s',
   },
   {
-    title: 'Number (N)ine — A/W 2001 "Standards"',
+    title: 'Number (N)ine - A/W 2001 "Standards"',
     href: 'https://www.youtube.com/watch?v=7IxrKuolccI',
   },
   {
-    title: 'Alexander McQueen — Fall/Winter 2009/2010',
+    title: 'Alexander McQueen - Fall/Winter 2009/2010',
     href: 'https://www.youtube.com/watch?v=er20fZrHzUc',
   },
   {
-    title: 'Givenchy — Fall/Winter 2022/2023, Paris',
+    title: 'Givenchy - Fall/Winter 2022/2023, Paris',
     href: 'https://www.youtube.com/watch?v=NOnVznBldxA',
   },
   {
-    title: '1017 ALYX 9SM — Fall/Winter 2022/2023',
+    title: '1017 ALYX 9SM - Fall/Winter 2022/2023',
     href: 'https://www.youtube.com/watch?v=8prPzm0dhPU',
   },
   {
-    title: 'Yohji Yamamoto — Menswear Spring/Summer 2022, Paris',
+    title: 'Yohji Yamamoto - Menswear Spring/Summer 2022, Paris',
     href: 'https://www.youtube.com/watch?v=SG6jjAUCzMk&t=845s',
   },
   {
-    title: 'A-COLD-WALL* — Spring/Summer 2022',
+    title: 'A-COLD-WALL* - Spring/Summer 2022',
     href: 'https://www.youtube.com/watch?v=le59feUbS0k',
   },
   {
-    title: 'KidSuper — Superby\'s Auction Fashion Show',
+    title: 'KidSuper - Superby\'s Auction Fashion Show',
     href: 'https://www.youtube.com/watch?v=IRckHSuIJlk',
   },
 ]
