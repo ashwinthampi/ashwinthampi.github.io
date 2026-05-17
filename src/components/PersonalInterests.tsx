@@ -1,16 +1,12 @@
-import type { Page } from '../types'
+import { Link } from 'react-router-dom'
 
-const items: { label: string; page: Page }[] = [
-  { label: 'favorite music', page: 'music' },
-  { label: 'books', page: 'books' },
-  { label: 'favorite runway shows', page: 'runway' },
+const items: { label: string; to: string }[] = [
+  { label: 'favorite music', to: '/music' },
+  { label: 'books', to: '/books' },
+  { label: 'favorite runway shows', to: '/runway' },
 ]
 
-interface Props {
-  onNavigate: (page: Page) => void
-}
-
-export default function PersonalInterests({ onNavigate }: Props) {
+export default function PersonalInterests() {
   return (
     <section className="mb-12">
       <h2 className="text-xs tracking-widest text-[#555] mb-3">
@@ -18,14 +14,14 @@ export default function PersonalInterests({ onNavigate }: Props) {
       </h2>
       <ul className="space-y-1">
         {items.map((item) => (
-          <li key={item.page} className="text-sm text-[#111]">
+          <li key={item.to} className="text-sm text-[#111]">
             <span className="text-[#555] mr-2">-&gt;</span>
-            <button
-              onClick={() => onNavigate(item.page)}
+            <Link
+              to={item.to}
               className="text-left underline underline-offset-2 decoration-[#555]/30 hover:decoration-[#111] transition-colors cursor-pointer"
             >
               {item.label}
-            </button>
+            </Link>
           </li>
         ))}
       </ul>
