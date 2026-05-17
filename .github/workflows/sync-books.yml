@@ -29,6 +29,11 @@ jobs:
         run: npm ci
 
       - name: Sync Goodreads
+        env:
+          # Not secret (the ID appears in the rendered link on the site),
+          # but kept here as a single source of truth. Swap to
+          # ${{ secrets.GOODREADS_USER_ID }} if you ever want it hidden.
+          GOODREADS_USER_ID: '198396455'
         run: npm run sync:books
 
       - name: Commit if changed

@@ -1,7 +1,7 @@
 import { writeFile, readFile } from 'node:fs/promises'
 import { XMLParser } from 'fast-xml-parser'
 
-const USER_ID = '198396455'
+const USER_ID = process.env.GOODREADS_USER_ID ?? '198396455'
 const OUT_PATH = 'src/data/books.json'
 
 const SHELVES = {
