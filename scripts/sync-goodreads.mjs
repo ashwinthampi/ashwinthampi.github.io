@@ -101,12 +101,24 @@ async function main() {
     }
   }
 
-  const data = {
-    generatedAt: new Date().toISOString(),
+  const content = {
     currentlyReading: currentItems.map(format),
     years: bucketByYear(readItems),
   }
 
+  const existing = await loadExisting()
+  const existingContent = existing
+    ? { currentlyReading: existing.currentlyReading, years: existing.years }
+    : null
+  const unchanged =
+    existingContent && JSON.stringify(existingContent) === JSON.stringify(content)
+
+  if (unchanged) {
+    console.log('no changes — books.json left untouched')
+    return
+  }
+
+  const data = { generatedAt: new Date().toISOString(), ...content }
   await writeFile(OUT_PATH, JSON.stringify(data, null, 2) + '\n', 'utf8')
   console.log(
     `wrote ${OUT_PATH} — ${data.currentlyReading.length} currently reading, ${
