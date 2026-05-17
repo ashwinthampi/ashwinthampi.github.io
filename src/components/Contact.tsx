@@ -6,7 +6,7 @@ export default function Contact() {
       </h2>
       <ul className="space-y-1">
         <li className="text-sm break-words">
-          <span className="text-[#555]">email — </span>
+          <span className="text-[#555]">email - </span>
           <a
             href="mailto:ashwin@thampi.com"
             className="text-[#111] underline underline-offset-2 decoration-[#555]/30 hover:decoration-[#111] transition-colors"
