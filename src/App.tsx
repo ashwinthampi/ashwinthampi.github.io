@@ -27,7 +27,7 @@ export default function App() {
           <>
             <Hero />
             <p className="text-xs text-[#555] mb-12">
-              the things we build are reflections of how we think, and that the work of engineering is, at its best, closer to writing than to manufacturing.
+              the things we build are reflections of how we think, and that the work of engineering is, at its best, closer to art than to manufacturing.
             </p>
             <About />
             <CareerInterests />
