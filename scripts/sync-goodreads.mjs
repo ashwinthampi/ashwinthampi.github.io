@@ -53,7 +53,7 @@ function cleanTitle(title) {
 
 function format(item) {
   const title = cleanTitle(item.title)
-  return item.author ? `${title} — ${item.author}` : title
+  return item.author ? `${title} - ${item.author}` : title
 }
 
 function bucketByYear(items) {

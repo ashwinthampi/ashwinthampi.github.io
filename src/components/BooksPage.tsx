@@ -6,18 +6,18 @@ interface Props {
 }
 
 const wantingToRead = [
-  'Solaris — Stanisław Lem',
-  'Ubik — Philip K. Dick',
-  'A Scanner Darkly — Philip K. Dick',
+  'Solaris - Stanisław Lem',
+  'Ubik - Philip K. Dick',
+  'A Scanner Darkly - Philip K. Dick',
 ]
 
 const legacyYears: Record<string, string[]> = {
   '2025': [
-    'The Three-Body Problem — Cixin Liu',
-    'The Stranger — Albert Camus',
-    'The Myth of Sisyphus — Albert Camus',
-    'Dune — Frank Herbert',
-    'The Creative Act: A Way of Being — Rick Rubin',
+    'The Three-Body Problem - Cixin Liu',
+    'The Stranger - Albert Camus',
+    'The Myth of Sisyphus - Albert Camus',
+    'Dune - Frank Herbert',
+    'The Creative Act: A Way of Being - Rick Rubin',
   ],
 }
 
