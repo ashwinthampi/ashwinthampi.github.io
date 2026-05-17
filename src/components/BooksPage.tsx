@@ -1,41 +1,38 @@
 import BackButton from './BackButton'
+import booksData from '../data/books.json'
 
 interface Props {
   onBack: () => void
 }
 
+const wantingToRead = [
+  'Solaris — Stanisław Lem',
+  'Ubik — Philip K. Dick',
+  'A Scanner Darkly — Philip K. Dick',
+]
+
+const legacyYears: Record<string, string[]> = {
+  '2025': [
+    'The Three-Body Problem — Cixin Liu',
+    'The Stranger — Albert Camus',
+    'The Myth of Sisyphus — Albert Camus',
+    'Dune — Frank Herbert',
+    'The Creative Act: A Way of Being — Rick Rubin',
+  ],
+}
+
+const syncedYears = booksData.years as Record<string, string[]>
+const mergedYears: Record<string, string[]> = { ...legacyYears, ...syncedYears }
+
 const sections: { title: string; items: string[] }[] = [
-  {
-    title: 'currently reading',
-    items: ['The Left Hand of Darkness — Ursula K. Le Guin'],
-  },
-  {
-    title: 'wanting to read',
-    items: [
-      'Solaris — Stanisław Lem',
-      'Ubik — Philip K. Dick',
-      'A Scanner Darkly — Philip K. Dick',
-    ],
-  },
-  {
-    title: '2026',
-    items: [
-      'Dark Matter — Blake Crouch',
-      'Brave New World — Aldous Huxley',
-      'Children of Time — Adrian Tchaikovsky',
-      'Do Androids Dream of Electric Sheep? — Philip K. Dick',
-    ],
-  },
-  {
-    title: '2025',
-    items: [
-      'The Three-Body Problem — Cixin Liu',
-      'The Stranger — Albert Camus',
-      'The Myth of Sisyphus — Albert Camus',
-      'Dune — Frank Herbert',
-      'The Creative Act: A Way of Being — Rick Rubin',
-    ],
-  },
+  { title: 'currently reading', items: booksData.currentlyReading },
+  { title: 'wanting to read', items: wantingToRead },
+  ...Object.keys(mergedYears)
+    .sort((a, b) => Number(b) - Number(a))
+    .map((year) => ({
+      title: year,
+      items: mergedYears[year],
+    })),
 ]
 
 export default function BooksPage({ onBack }: Props) {
