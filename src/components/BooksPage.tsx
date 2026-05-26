@@ -5,12 +5,6 @@ interface Props {
   onBack: () => void
 }
 
-const wantingToRead = [
-  'Solaris - Stanisław Lem',
-  'Ubik - Philip K. Dick',
-  'A Scanner Darkly - Philip K. Dick',
-]
-
 const legacyYears: Record<string, string[]> = {
   '2025': [
     'The Three-Body Problem - Cixin Liu',
@@ -26,7 +20,7 @@ const mergedYears: Record<string, string[]> = { ...legacyYears, ...syncedYears }
 
 const sections: { title: string; items: string[] }[] = [
   { title: 'currently reading', items: booksData.currentlyReading },
-  { title: 'wanting to read', items: wantingToRead },
+  { title: 'wanting to read', items: booksData.wantingToRead },
   ...Object.keys(mergedYears)
     .sort((a, b) => Number(b) - Number(a))
     .map((year) => ({

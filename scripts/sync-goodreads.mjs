@@ -7,6 +7,7 @@ const OUT_PATH = 'src/data/books.json'
 const SHELVES = {
   read: `https://www.goodreads.com/review/list_rss/${USER_ID}?shelf=read`,
   currentlyReading: `https://www.goodreads.com/review/list_rss/${USER_ID}?shelf=currently-reading`,
+  wantingToRead: `https://www.goodreads.com/review/list_rss/${USER_ID}?shelf=to-read`,
 }
 
 async function fetchShelf(url) {
@@ -85,13 +86,15 @@ async function loadExisting() {
 }
 
 async function main() {
-  const [readXml, currentXml] = await Promise.all([
+  const [readXml, currentXml, wantXml] = await Promise.all([
     fetchShelf(SHELVES.read),
     fetchShelf(SHELVES.currentlyReading),
+    fetchShelf(SHELVES.wantingToRead),
   ])
 
   const readItems = parseShelf(readXml)
   const currentItems = parseShelf(currentXml)
+  const wantItems = parseShelf(wantXml)
 
   if (readItems.length === 0 && currentItems.length === 0) {
     const existing = await loadExisting()
@@ -103,12 +106,17 @@ async function main() {
 
   const content = {
     currentlyReading: currentItems.map(format),
+    wantingToRead: wantItems.map(format),
     years: bucketByYear(readItems),
   }
 
   const existing = await loadExisting()
   const existingContent = existing
-    ? { currentlyReading: existing.currentlyReading, years: existing.years }
+    ? {
+        currentlyReading: existing.currentlyReading,
+        wantingToRead: existing.wantingToRead,
+        years: existing.years,
+      }
     : null
   const unchanged =
     existingContent && JSON.stringify(existingContent) === JSON.stringify(content)
@@ -121,7 +129,7 @@ async function main() {
   const data = { generatedAt: new Date().toISOString(), ...content }
   await writeFile(OUT_PATH, JSON.stringify(data, null, 2) + '\n', 'utf8')
   console.log(
-    `wrote ${OUT_PATH} — ${data.currentlyReading.length} currently reading, ${
+    `wrote ${OUT_PATH} — ${data.currentlyReading.length} currently reading, ${data.wantingToRead.length} wanting to read, ${
       Object.values(data.years).reduce((a, b) => a + b.length, 0)
     } read across ${Object.keys(data.years).length} years`,
   )
