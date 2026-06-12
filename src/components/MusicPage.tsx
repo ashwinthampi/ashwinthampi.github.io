@@ -11,16 +11,13 @@ const sections: { title: string; items: Item[] }[] = [
     title: 'currently rotating',
     items: [
       {
-        title: 'KETTAMA @ Coachella 2026 - Yuma Stage',
-        href: 'https://www.youtube.com/watch?v=t0TZhkzDMAI',
+        title: 'Frost Children @ EDC Las Vegas 2026',
+        href: 'https://www.youtube.com/watch?v=a8OfrpQLQuY&t=175s',
       },
-      {
-        title: 'Krystian Zimerman - Chopin & Schubert',
-        href: 'https://www.youtube.com/watch?v=MgmHetWIfPc',
-      },
-      'snafu - :)',
+      'Skrillex - SOMA',
+      'Loathe - I Let It in and It Took Everything',
       'Boards of Canada - Inferno',
-      'siraph - 想像の雨',
+      'Bladee - Sulfur Surfer',
     ],
   },
   {
@@ -88,6 +85,10 @@ const sections: { title: string; items: Item[] }[] = [
       {
         title: 'Fantasm @ Verknipt ArenA, Amsterdam',
         href: 'https://soundcloud.com/verknipt-events/fantasm-verknipt-arena',
+      },
+      {
+        title: 'KETTAMA @ Coachella 2026 - Yuma Stage',
+        href: 'https://www.youtube.com/watch?v=t0TZhkzDMAI',
       },
     ],
   },
