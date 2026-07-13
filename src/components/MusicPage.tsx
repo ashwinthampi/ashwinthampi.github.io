@@ -10,14 +10,11 @@ const sections: { title: string; items: Item[] }[] = [
   {
     title: 'currently rotating',
     items: [
-      {
-        title: 'Frost Children @ EDC Las Vegas 2026',
-        href: 'https://www.youtube.com/watch?v=a8OfrpQLQuY&t=175s',
-      },
-      'Skrillex - SOMA',
-      'Loathe - I Let It in and It Took Everything',
-      'Boards of Canada - Inferno',
-      'Bladee - Sulfur Surfer',
+      'Ken Carson - xperiment',
+      'Thom Yorke - The Eraser',
+      'kindred - PROPHET',
+      'LSD and a Search for God - LSD and a Search for God',
+      'Four Tet - Wingdings',
     ],
   },
   {
@@ -89,6 +86,10 @@ const sections: { title: string; items: Item[] }[] = [
       {
         title: 'KETTAMA @ Coachella 2026 - Yuma Stage',
         href: 'https://www.youtube.com/watch?v=t0TZhkzDMAI',
+      },
+      {
+        title: 'Frost Children @ EDC Las Vegas 2026',
+        href: 'https://www.youtube.com/watch?v=a8OfrpQLQuY&t=175s',
       },
     ],
   },

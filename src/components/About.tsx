@@ -5,7 +5,7 @@ export default function About() {
         about
       </h2>
       <p className="text-sm leading-relaxed text-[#111]">
-        Currently building AI agents and automation tools at ERP Suites.
+        Currently building AI agents and automation tools.
         Purdue computer engineering grad.
       </p>
     </section>
