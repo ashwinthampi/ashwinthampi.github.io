@@ -12,8 +12,8 @@ const sections: { title: string; items: Item[] }[] = [
     items: [
       'Ken Carson - xperiment',
       'Thom Yorke - The Eraser',
-      'kindred - PROPHET',
-      'LSD and a Search for God - LSD and a Search for God',
+      'Frost Children - Tweaker Poem',
+      'Sir John Tavener - Funeral Canticle',
       'Four Tet - Wingdings',
     ],
   },
