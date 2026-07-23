@@ -25,12 +25,26 @@ body {
   color: #f5f0eb;
 }
 
-/* LinkedIn hint: visible by default on touch devices, hover-triggered on desktop */
+/* Hover hint: visible by default on touch devices, hover-triggered on desktop */
 @media (hover: hover) {
-  .linkedin-hint {
+  .hover-hint {
     opacity: 0;
   }
-  .group:hover .linkedin-hint {
+  .group:hover .hover-hint {
+    opacity: 1;
+  }
+}
+
+/* Desktop-only hint: hidden entirely on touch devices, hover-triggered on desktop */
+.desktop-hint {
+  display: none;
+}
+@media (hover: hover) {
+  .desktop-hint {
+    display: inline;
+    opacity: 0;
+  }
+  .group:hover .desktop-hint {
     opacity: 1;
   }
 }

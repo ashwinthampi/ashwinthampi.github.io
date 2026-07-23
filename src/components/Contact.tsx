@@ -23,7 +23,7 @@ export default function Contact() {
           >
             linkedin
           </a>
-          <span className="linkedin-hint text-xs text-[#555] transition-opacity duration-200">
+          <span className="hover-hint text-xs text-[#555] transition-opacity duration-200">
             &larr; connect with me here
           </span>
         </li>
