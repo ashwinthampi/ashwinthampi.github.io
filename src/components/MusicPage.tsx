@@ -10,11 +10,11 @@ const sections: { title: string; items: Item[] }[] = [
   {
     title: 'currently rotating',
     items: [
-      'Ken Carson - xperiment',
-      'Thom Yorke - The Eraser',
-      'Frost Children - Tweaker Poem',
-      'Sir John Tavener - Funeral Canticle',
-      'Four Tet - Wingdings',
+      'MPH & Skrillex - Mirage',
+      'Mellina Tey - Obsession',
+      'Hitsujibungaku - Keep Walking',
+      'Crowbar - Sonic Excess In Its Purest Form',
+      'diamond* - BLING SLIME VØL 1: HØSTED BY DJ HØLIDAY',
     ],
   },
   {
