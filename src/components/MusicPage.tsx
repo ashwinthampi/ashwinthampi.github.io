@@ -10,11 +10,11 @@ const sections: { title: string; items: Item[] }[] = [
   {
     title: 'currently rotating',
     items: [
-      'MPH & Skrillex - Mirage',
-      'Mellina Tey - Obsession',
-      'Hitsujibungaku - Keep Walking',
-      'Crowbar - Sonic Excess In Its Purest Form',
-      'diamond* - BLING SLIME VØL 1: HØSTED BY DJ HØLIDAY',
+      'Lucy Bedroque - c',
+      'maya ongaku - Nothing Space Music',
+      'Type O Negative - Bloody Kisses',
+      'Lex Amarni - loft music',
+      'Röyksopp - Nebulous Nights',
     ],
   },
   {
